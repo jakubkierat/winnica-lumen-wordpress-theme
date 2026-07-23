@@ -9,19 +9,24 @@ dot. wdrożenia (SSH) i CDN/DNS (Cloudflare).
 > Branża (winiarnia/sklep z winem) i nazwa marki są całkowicie fikcyjne —
 > to projekt portfolio, nie strona żadnej istniejącej firmy.
 
+## 🔗 Live podgląd
+
+**[jakubkierat.github.io/winnica-lumen-wordpress-theme](https://jakubkierat.github.io/winnica-lumen-wordpress-theme/)**
+
 ## Szybki podgląd bez instalacji WordPressa
 
-Katalog [`preview/`](preview/) zawiera statyczny podgląd całej strony
-(jedna strona, ze wszystkimi sekcjami łącznie z formularzem kontaktowym)
-- ten sam HTML/CSS/JS co w motywie, tylko bez zależności od bazy danych
-i silnika WordPressa. Wystarczy otworzyć `preview/index.html` w
-przeglądarce (albo wystawić katalog przez dowolny serwer statyczny /
-GitHub Pages).
+Plik [`index.html`](index.html) w katalogu głównym zawiera statyczny
+podgląd całej strony (jedna strona, ze wszystkimi sekcjami łącznie
+z formularzem kontaktowym) - ten sam HTML/CSS/JS co w motywie, tylko
+bez zależności od bazy danych i silnika WordPressa. To właśnie ten plik
+jest wystawiony przez GitHub Pages pod linkiem powyżej; można go też
+po prostu otworzyć lokalnie w przeglądarce.
 
 ## Struktura repozytorium
 
 ```
 winnica-lumen-wordpress-theme/
+├── index.html                ← statyczny podgląd (patrz wyżej) — wystawiany przez GitHub Pages
 ├── theme/                    ← właściwy motyw WordPress (wrzuć do wp-content/themes/)
 │   ├── style.css             ← nagłówek motywu (wymagany przez WP)
 │   ├── functions.php         ← konfiguracja motywu, enqueue CSS/JS, menu
@@ -41,7 +46,6 @@ winnica-lumen-wordpress-theme/
 │   └── assets/
 │       ├── css/main.css      ← czysty CSS3 (custom properties, grid/flex, animacje)
 │       └── js/main.js        ← czysty JavaScript (bez zależności)
-├── preview/                  ← statyczny podgląd (patrz wyżej)
 ├── deploy.example.sh         ← przykładowy skrypt wdrożenia przez SSH/rsync
 ├── LICENSE                   ← GPLv2 (standard dla motywów WordPress)
 └── README.md
