@@ -2,7 +2,7 @@
 /**
  * Szablon strony głównej (Template Hierarchy: front-page.php).
  *
- * Jednostronicowy układ — formularz kontaktowy jest częścią tej samej
+ * Jednostronicowy układ - formularz kontaktowy jest częścią tej samej
  * strony (sekcja #kontakt), a nie osobną podstroną.
  *
  * @package WinnicaLumen
@@ -25,7 +25,7 @@ get_header();
 			<p class="hero-eyebrow hero-enter hero-enter-1"><?php esc_html_e( 'Winnica rodzinna od 2011 roku', 'winnica-lumen' ); ?></p>
 			<h1 class="hero-enter hero-enter-2"><?php esc_html_e( 'Wina, które opowiadają', 'winnica-lumen' ); ?> <em><?php esc_html_e( 'historię miejsca', 'winnica-lumen' ); ?></em></h1>
 			<p class="lead hero-enter hero-enter-3">
-				<?php esc_html_e( 'Winnica Lumen to niewielka, kameralna winiarnia i sklep z winami — selekcjonujemy roczniki, które lubimy pić sami, i chętnie pomożemy Ci znaleźć butelkę na każdą okazję.', 'winnica-lumen' ); ?>
+				<?php esc_html_e( 'Winnica Lumen to niewielka, kameralna winiarnia i sklep z winami - selekcjonujemy roczniki, które lubimy pić sami, i chętnie pomożemy Ci znaleźć butelkę na każdą okazję.', 'winnica-lumen' ); ?>
 			</p>
 
 			<div class="hero-actions hero-enter hero-enter-4">
@@ -122,10 +122,10 @@ get_header();
 			</p>
 
 			<p>
-				<?php esc_html_e( 'Zaczynaliśmy od kilkunastu win na własne potrzeby. Dziś prowadzimy sklep stacjonarny i internetowy, organizujemy degustacje i pomagamy dobrać wino do wydarzeń — od kameralnej kolacji po firmowe spotkania.', 'winnica-lumen' ); ?>
+				<?php esc_html_e( 'Zaczynaliśmy od kilkunastu win na własne potrzeby. Dziś prowadzimy sklep stacjonarny i internetowy, organizujemy degustacje i pomagamy dobrać wino do wydarzeń - od kameralnej kolacji po firmowe spotkania.', 'winnica-lumen' ); ?>
 			</p>
 			<p>
-				<?php esc_html_e( 'Współpracujemy bezpośrednio z kilkunastoma niewielkimi producentami z Europy i Polski — jeździmy na winnice, degustujemy przed zakupem i wybieramy roczniki, które nas przekonują, a nie tylko dobrze wyglądają w katalogu.', 'winnica-lumen' ); ?>
+				<?php esc_html_e( 'Współpracujemy bezpośrednio z kilkunastoma niewielkimi producentami z Europy i Polski - jeździmy na winnice, degustujemy przed zakupem i wybieramy roczniki, które nas przekonują, a nie tylko dobrze wyglądają w katalogu.', 'winnica-lumen' ); ?>
 			</p>
 
 			<div class="about-features-row">
@@ -173,19 +173,19 @@ get_header();
 			<div class="process-card reveal">
 				<span class="process-ghost-num">01</span>
 				<h3><?php esc_html_e( 'Napisz, czego szukasz', 'winnica-lumen' ); ?></h3>
-				<p><?php esc_html_e( 'Okazja, liczba osób, budżet, preferencje smakowe — im więcej szczegółów, tym trafniejsza propozycja.', 'winnica-lumen' ); ?></p>
+				<p><?php esc_html_e( 'Okazja, liczba osób, budżet, preferencje smakowe - im więcej szczegółów, tym trafniejsza propozycja.', 'winnica-lumen' ); ?></p>
 			</div>
 
 			<div class="process-card reveal">
 				<span class="process-ghost-num">02</span>
 				<h3><?php esc_html_e( 'Dostajesz propozycję', 'winnica-lumen' ); ?></h3>
-				<p><?php esc_html_e( 'Zwykle w ciągu jednego dnia roboczego przygotowujemy 2–3 propozycje win.', 'winnica-lumen' ); ?></p>
+				<p><?php esc_html_e( 'Zwykle w ciągu jednego dnia roboczego przygotowujemy 2-3 propozycje win.', 'winnica-lumen' ); ?></p>
 			</div>
 
 			<div class="process-card reveal">
 				<span class="process-ghost-num">03</span>
 				<h3><?php esc_html_e( 'Degustacja albo dostawa', 'winnica-lumen' ); ?></h3>
-				<p><?php esc_html_e( 'Na miejscu w Opolu albo kurierem w całej Polsce — jak Ci wygodniej.', 'winnica-lumen' ); ?></p>
+				<p><?php esc_html_e( 'Na miejscu w Opolu albo kurierem w całej Polsce - jak Ci wygodniej.', 'winnica-lumen' ); ?></p>
 			</div>
 
 			<div class="process-card reveal">
@@ -242,7 +242,7 @@ get_header();
 
 		<div class="testimonial-grid reveal-group">
 			<div class="testimonial-card reveal">
-				<p class="testimonial-quote"><?php esc_html_e( 'Degustacja urodzinowa u Winnicy Lumen była strzałem w dziesiątkę — dobrano wina idealnie pod nasze gusta, bez zadzierania nosa.', 'winnica-lumen' ); ?></p>
+				<p class="testimonial-quote"><?php esc_html_e( 'Degustacja urodzinowa u Winnicy Lumen była strzałem w dziesiątkę - dobrano wina idealnie pod nasze gusta, bez zadzierania nosa.', 'winnica-lumen' ); ?></p>
 				<div class="testimonial-author">
 					<span class="avatar-initials" style="background: var(--color-wine);">MK</span>
 					<div>
@@ -262,7 +262,7 @@ get_header();
 				</div>
 			</div>
 			<div class="testimonial-card reveal">
-				<p class="testimonial-quote"><?php esc_html_e( 'Świetna selekcja win musujących na wesele. Obsługa doradziła też, jak dobrać wina do menu — bardzo profesjonalnie.', 'winnica-lumen' ); ?></p>
+				<p class="testimonial-quote"><?php esc_html_e( 'Świetna selekcja win musujących na wesele. Obsługa doradziła też, jak dobrać wina do menu - bardzo profesjonalnie.', 'winnica-lumen' ); ?></p>
 				<div class="testimonial-author">
 					<span class="avatar-initials" style="background: var(--color-wine-light);">AN</span>
 					<div>
@@ -298,7 +298,7 @@ get_header();
 					<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
 				</summary>
 				<div class="faq-answer">
-					<p><?php esc_html_e( 'Jak najbardziej — degustacje firmowe organizujemy zarówno u nas, jak i wyjazdowo, dla grup do około 20 osób.', 'winnica-lumen' ); ?></p>
+					<p><?php esc_html_e( 'Jak najbardziej - degustacje firmowe organizujemy zarówno u nas, jak i wyjazdowo, dla grup do około 20 osób.', 'winnica-lumen' ); ?></p>
 				</div>
 			</details>
 			<details class="faq-item reveal">
@@ -316,7 +316,7 @@ get_header();
 					<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
 				</summary>
 				<div class="faq-answer">
-					<p><?php esc_html_e( 'Tak, zapraszamy do Opola pod adres podany w sekcji kontakt — najlepiej po wcześniejszym umówieniu wizyty.', 'winnica-lumen' ); ?></p>
+					<p><?php esc_html_e( 'Tak, zapraszamy do Opola pod adres podany w sekcji kontakt - najlepiej po wcześniejszym umówieniu wizyty.', 'winnica-lumen' ); ?></p>
 				</div>
 			</details>
 		</div>
@@ -329,7 +329,7 @@ get_header();
 			<div>
 				<p class="eyebrow" style="color: var(--color-gold-light);"><?php esc_html_e( 'Kontakt', 'winnica-lumen' ); ?></p>
 				<h2><?php esc_html_e( 'Zaplanujmy Twoją degustację', 'winnica-lumen' ); ?></h2>
-				<p><?php esc_html_e( 'Napisz, co chcesz zorganizować — odezwiemy się z propozycją dopasowaną do okazji i budżetu.', 'winnica-lumen' ); ?></p>
+				<p><?php esc_html_e( 'Napisz, co chcesz zorganizować - odezwiemy się z propozycją dopasowaną do okazji i budżetu.', 'winnica-lumen' ); ?></p>
 
 				<div class="contact-info-item">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6.5-5.44-6.5-10.5a6.5 6.5 0 1 1 13 0C18.5 15.56 12 21 12 21Z" /></svg>
@@ -348,7 +348,7 @@ get_header();
 			<div>
 				<?php if ( $contact_result['submitted'] && $contact_result['success'] ) : ?>
 					<p class="form-notice is-success">
-						<?php esc_html_e( 'Dziękujemy! Wiadomość została wysłana — odezwiemy się wkrótce.', 'winnica-lumen' ); ?>
+						<?php esc_html_e( 'Dziękujemy! Wiadomość została wysłana - odezwiemy się wkrótce.', 'winnica-lumen' ); ?>
 					</p>
 				<?php elseif ( $contact_result['submitted'] && ! empty( $errors['form'] ) ) : ?>
 					<p class="form-notice is-error"><?php echo esc_html( $errors['form'] ); ?></p>

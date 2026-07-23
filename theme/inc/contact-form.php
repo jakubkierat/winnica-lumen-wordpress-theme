@@ -2,7 +2,7 @@
 /**
  * Obsługa formularza kontaktowego w sekcji #kontakt na stronie głównej (front-page.php).
  *
- * Bez zewnętrznych wtyczek (typu Contact Form 7) — czysty PHP + wp_mail(),
+ * Bez zewnętrznych wtyczek (typu Contact Form 7) - czysty PHP + wp_mail(),
  * z walidacją po stronie serwera, nonce i prostym honeypotem anty-spamowym.
  *
  * @package WinnicaLumen
@@ -87,7 +87,7 @@ function winnica_lumen_handle_contact_form() {
 	$to      = get_option( 'admin_email' );
 	$subject = sprintf(
 		/* translators: %s: imię i nazwisko nadawcy. */
-		__( 'Nowa wiadomość ze strony — od %s', 'winnica-lumen' ),
+		__( 'Nowa wiadomość ze strony - od %s', 'winnica-lumen' ),
 		$name
 	);
 

@@ -3,7 +3,7 @@ Theme Name: Winnica Lumen
 Theme URI: https://github.com/jakubkierat/winnica-lumen-wordpress-theme
 Author: Jakub Kierat
 Author URI: https://github.com/jakubkierat
-Description: Autorski motyw WordPress dla fikcyjnej winiarni "Winnica Lumen" — projekt demonstracyjny (HTML5, CSS3, JavaScript, PHP, WordPress Template Hierarchy, Custom Post Types). Stworzony jako przykład do portfolio, nie jako produkt komercyjny.
+Description: Autorski motyw WordPress dla fikcyjnej winiarni "Winnica Lumen" - projekt demonstracyjny (HTML5, CSS3, JavaScript, PHP, WordPress Template Hierarchy, Custom Post Types). Stworzony jako przykład do portfolio, nie jako produkt komercyjny.
 Version: 1.0.0
 Requires at least: 6.4
 Requires PHP: 8.0
@@ -14,7 +14,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 /*
  * Ten plik jest wymagany przez WordPressa (nagłówek motywu) i celowo
- * pozostaje pusty poza komentarzem — właściwe style ładowane są
+ * pozostaje pusty poza komentarzem - właściwe style ładowane są
  * z assets/css/main.css przez wp_enqueue_style() w functions.php,
  * żeby uniknąć trzymania całego CSS w jednym, niepodzielonym pliku.
  */

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Przykładowy skrypt wdrożenia motywu na serwer przez SSH + rsync.
-# To jest SZABLON do dostosowania pod konkretny hosting — nie uruchamiaj
+# To jest SZABLON do dostosowania pod konkretny hosting - nie uruchamiaj
 # tego bez podmiany danych poniżej. Pokazuje typowy przepływ pracy
 # "commit → rsync po SSH → wyczyszczenie cache", z jakim można się
 # spotkać przy utrzymaniu stron na WordPressie.
@@ -41,7 +41,7 @@ ssh -p "${REMOTE_PORT}" "${REMOTE_USER}@${REMOTE_HOST}" \
 #     -H "Authorization: Bearer <API_TOKEN>" \
 #     -H "Content-Type: application/json" \
 #     --data '{"purge_everything":true}'
-# (token/ID celowo nie są tu wpisane — trzymaj je w zmiennych środowiskowych
+# (token/ID celowo nie są tu wpisane - trzymaj je w zmiennych środowiskowych
 # CI/CD, nigdy w repozytorium).
 
 echo "Gotowe."

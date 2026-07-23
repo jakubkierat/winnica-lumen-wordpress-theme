@@ -1,6 +1,6 @@
 <?php
 /**
- * Winnica Lumen — funkcje motywu.
+ * Winnica Lumen - funkcje motywu.
  *
  * @package WinnicaLumen
  */

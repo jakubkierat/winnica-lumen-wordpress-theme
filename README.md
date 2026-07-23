@@ -6,7 +6,7 @@ wymagany przy utrzymaniu i rozwoju mniejszych stron opartych o WordPress:
 **HTML5, CSS3, JavaScript, PHP, WordPress, Git/GitHub**, plus dokumentację
 dot. wdrożenia (SSH) i CDN/DNS (Cloudflare).
 
-> Branża (winiarnia/sklep z winem) i nazwa marki są całkowicie fikcyjne —
+> Branża (winiarnia/sklep z winem) i nazwa marki są całkowicie fikcyjne -
 > to projekt portfolio, nie strona żadnej istniejącej firmy.
 
 ## 🔗 Live podgląd
@@ -26,14 +26,14 @@ po prostu otworzyć lokalnie w przeglądarce.
 
 ```
 winnica-lumen-wordpress-theme/
-├── index.html                ← statyczny podgląd (patrz wyżej) — wystawiany przez GitHub Pages
+├── index.html                ← statyczny podgląd (patrz wyżej) - wystawiany przez GitHub Pages
 ├── theme/                    ← właściwy motyw WordPress (wrzuć do wp-content/themes/)
 │   ├── style.css             ← nagłówek motywu (wymagany przez WP)
 │   ├── functions.php         ← konfiguracja motywu, enqueue CSS/JS, menu
 │   ├── header.php / footer.php
 │   ├── front-page.php        ← strona główna: hero, oferta, o nas, proces,
 │   │                            galeria, opinie, FAQ i formularz kontaktowy
-│   │                            (#kontakt) — wszystko na jednej stronie
+│   │                            (#kontakt) - wszystko na jednej stronie
 │   ├── page.php              ← domyślny szablon zwykłej podstrony
 │   ├── archive-wino.php      ← katalog win (archiwum CPT)
 │   ├── single-wino.php       ← widok pojedynczego wina
@@ -98,11 +98,11 @@ winnica-lumen-wordpress-theme/
 | --- | --- |
 | HTML5 | semantyczna struktura w `header.php`, `footer.php`, szablonach |
 | CSS3 | `theme/assets/css/main.css` - custom properties, Grid/Flexbox, animacje |
-| JavaScript | `theme/assets/js/main.js` — bez zależności, vanilla JS |
+| JavaScript | `theme/assets/js/main.js` - bez zależności, vanilla JS |
 | PHP | całość logiki motywu i CPT w `theme/*.php`, `theme/inc/*.php` |
 | WordPress | Template Hierarchy, CPT, taksonomie, `wp_mail`, `wp_nav_menu`, metaboxy |
 | GitHub | to repozytorium - historia commitów, README, licencja |
-| Praca w terminalu (SSH) | `deploy.example.sh` — przykładowy przepływ wdrożenia |
+| Praca w terminalu (SSH) | `deploy.example.sh` - przykładowy przepływ wdrożenia |
 | Cloudflare | sekcja niżej - zalecenia konfiguracyjne |
 | Selly | zobacz uwagę poniżej tabeli |
 
@@ -128,13 +128,13 @@ Dla domeny spiętej z Cloudflare warto:
 ## Zdjęcia
 
 Zdjęcia pochodzą z [Unsplash](https://unsplash.com) i są używane na
-[Unsplash License](https://unsplash.com/license) — darmowej w użyciu
+[Unsplash License](https://unsplash.com/license) - darmowej w użyciu
 komercyjnym i niekomercyjnym, bez wymogu podawania autora. Pełna lista
 z linkami i podpisami autorów: [`theme/inc/photos.php`](theme/inc/photos.php).
 
 ## Licencja
 
-Kod motywu jest udostępniony na licencji GPLv2 lub późniejszej — zgodnie ze
+Kod motywu jest udostępniony na licencji GPLv2 lub późniejszej - zgodnie ze
 standardową konwencją motywów WordPress. Zobacz [LICENSE](LICENSE).
 
 ---

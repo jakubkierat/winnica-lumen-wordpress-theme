@@ -1,6 +1,6 @@
 <?php
 /**
- * Karta pojedynczego wina — używana w pętli na stronie głównej i w archiwum.
+ * Karta pojedynczego wina - używana w pętli na stronie głównej i w archiwum.
  *
  * @package WinnicaLumen
  */

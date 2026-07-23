@@ -1,5 +1,5 @@
 /**
- * Winnica Lumen — front-end interactions.
+ * Winnica Lumen - front-end interactions.
  * Vanilla JS, no build step, no dependencies.
  */
 (function () {

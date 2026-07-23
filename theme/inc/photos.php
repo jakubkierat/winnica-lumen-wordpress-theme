@@ -4,10 +4,10 @@
  *
  * Motyw demo nie ma dostępu do prawdziwej biblioteki mediów (nie ma za
  * nim działającej instalacji WordPressa z uploadami), więc zamiast pustych
- * ramek używamy prawdziwych, darmowych zdjęć z Unsplash — dokładnie tak,
+ * ramek używamy prawdziwych, darmowych zdjęć z Unsplash - dokładnie tak,
  * jak w innym moim projekcie referencyjnym (nova-estate). Wszystkie są na
  * licencji Unsplash License (unsplash.com/license): darmowe w użyciu
- * komercyjnym i niekomercyjnym, bez wymogu podawania autora — mimo to
+ * komercyjnym i niekomercyjnym, bez wymogu podawania autora - mimo to
  * podajemy fotografów poniżej z uprzejmości.
  *
  * W prawdziwym wdrożeniu WordPress te miejsca zajęłyby zdjęcia z biblioteki
