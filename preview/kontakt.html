@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kontakt — Winnica Lumen (podgląd statyczny)</title>
+<link rel="stylesheet" href="../theme/assets/css/main.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Przejdź do treści</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 2h8l-1 7a3 3 0 0 1-6 0L8 2Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 13v6M9 21h6" />
+      </svg>
+      Winnica Lumen
+    </a>
+
+    <nav class="main-nav" aria-label="Menu główne">
+      <ul>
+        <li><a href="index.html#oferta">Oferta</a></li>
+        <li><a href="index.html#o-nas">O nas</a></li>
+        <li><a href="index.html#oferta">Wina</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="kontakt.html" class="btn btn-primary btn-sm">Umów degustację</a>
+      <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="section" style="margin-top:40px;">
+    <div class="container">
+      <div class="contact-panel reveal">
+        <div>
+          <p class="eyebrow" style="color: var(--color-gold-light);">Kontakt</p>
+          <h2>Napisz do nas</h2>
+          <p>Odpowiadamy zwykle w ciągu jednego dnia roboczego. Możesz też zadzwonić lub wpaść do nas osobiście.</p>
+
+          <div class="contact-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6.5-5.44-6.5-10.5a6.5 6.5 0 1 1 13 0C18.5 15.56 12 21 12 21Z" /></svg>
+            <span>ul. Winna 12, 45-000 Opole</span>
+          </div>
+          <div class="contact-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25v10.5A2.25 2.25 0 0 1 19.5 19.5h-15a2.25 2.25 0 0 1-2.25-2.25V6.75Z" /></svg>
+            <span>kontakt@winnicalumen.example</span>
+          </div>
+          <div class="contact-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h.75a1.5 1.5 0 0 0 1.5-1.5v-2.373a1.5 1.5 0 0 0-1.06-1.435l-3.114-.935a1.5 1.5 0 0 0-1.514.39l-.943.944a10.5 10.5 0 0 1-6.364-6.364l.944-.943a1.5 1.5 0 0 0 .39-1.514l-.935-3.114A1.5 1.5 0 0 0 6.123 2.25H3.75a1.5 1.5 0 0 0-1.5 1.5v.75Z" /></svg>
+            <span>+48 600 000 000</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="form-notice is-success" data-demo-success hidden>
+            Dziękujemy! (To jest statyczny podgląd — w prawdziwym motywie WordPress wiadomość
+            zostałaby wysłana przez wp_mail(), patrz theme/inc/contact-form.php.)
+          </p>
+
+          <form data-contact-form novalidate>
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="website_url">Zostaw to pole puste</label>
+              <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-name">Imię i nazwisko</label>
+              <input type="text" id="contact-name" name="name" placeholder="Jan Kowalski" data-error-message="Podaj imię i nazwisko (min. 2 znaki)." required />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">E-mail</label>
+              <input type="email" id="contact-email" name="email" placeholder="jan@przyklad.pl" data-error-message="Podaj poprawny adres e-mail." required />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-phone">Telefon (opcjonalnie)</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="+48 600 000 000" />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Wiadomość</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Opowiedz nam o okazji, liczbie gości i budżecie…" data-error-message="Wiadomość jest zbyt krótka (min. 10 znaków)." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold">Wyślij wiadomość</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Winnica Lumen. Wszystkie prawa zastrzeżone.</p>
+    <p>Motyw demo: Winnica Lumen</p>
+  </div>
+</footer>
+
+<script src="../theme/assets/js/main.js"></script>
+<script>
+  // Tylko na potrzeby statycznego podglądu (bez backendu PHP):
+  // po przejściu walidacji z main.js pokazujemy komunikat sukcesu
+  // zamiast realnie wysyłać formularz.
+  (function () {
+    var form = document.querySelector('[data-contact-form]');
+    var successBox = document.querySelector('[data-demo-success]');
+    if (!form || !successBox) return;
+
+    form.addEventListener('submit', function (event) {
+      if (event.defaultPrevented) return; // main.js already blocked it (invalid fields)
+      event.preventDefault();
+      form.hidden = true;
+      successBox.hidden = false;
+    });
+  })();
+</script>
+</body>
+</html>

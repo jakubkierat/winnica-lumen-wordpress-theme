@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# In case this theme is ever tested inside a local full WordPress install
+# nested in this folder, keep WordPress core / secrets out of the repo.
+wp-config.php
+wp-content/uploads/
