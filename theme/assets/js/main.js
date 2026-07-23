@@ -5,6 +5,8 @@
 (function () {
   "use strict";
 
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   /* ---------- Sticky / shrinking header ---------- */
   var header = document.querySelector(".site-header");
 
@@ -34,6 +36,69 @@
         navToggle.setAttribute("aria-expanded", "false");
       });
     });
+  }
+
+  /* ---------- Wine carousel (horizontal scroll-snap + nav buttons) ---------- */
+  var carousel = document.querySelector("[data-carousel]");
+  var carouselPrev = document.querySelector("[data-carousel-prev]");
+  var carouselNext = document.querySelector("[data-carousel-next]");
+
+  if (carousel && (carouselPrev || carouselNext)) {
+    var scrollByCard = function (direction) {
+      var card = carousel.querySelector(".wine-card");
+      var amount = card ? card.getBoundingClientRect().width + 20 : 300;
+      carousel.scrollBy({ left: direction * amount, behavior: prefersReducedMotion ? "auto" : "smooth" });
+    };
+
+    if (carouselPrev) carouselPrev.addEventListener("click", function () { scrollByCard(-1); });
+    if (carouselNext) carouselNext.addEventListener("click", function () { scrollByCard(1); });
+  }
+
+  /* ---------- Animated stat counters ---------- */
+  var counters = document.querySelectorAll("[data-counter]");
+
+  if (counters.length && "IntersectionObserver" in window) {
+    var counterObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    counters.forEach(function (el) {
+      counterObserver.observe(el);
+    });
+  } else {
+    counters.forEach(function (el) {
+      el.textContent = el.dataset.target + (el.dataset.suffix || "");
+    });
+  }
+
+  function animateCounter(el) {
+    var target = parseInt(el.dataset.target, 10) || 0;
+    var suffix = el.dataset.suffix || "";
+
+    if (prefersReducedMotion) {
+      el.textContent = target + suffix;
+      return;
+    }
+
+    var duration = 1400;
+    var start = null;
+
+    function step(timestamp) {
+      if (start === null) start = timestamp;
+      var progress = Math.min((timestamp - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
   }
 
   /* ---------- Scroll-reveal via IntersectionObserver ---------- */

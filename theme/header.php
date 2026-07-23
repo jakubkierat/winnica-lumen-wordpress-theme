@@ -46,8 +46,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<ul>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#oferta"><?php esc_html_e( 'Oferta', 'winnica-lumen' ); ?></a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#o-nas"><?php esc_html_e( 'O nas', 'winnica-lumen' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/wina/' ) ); ?>"><?php esc_html_e( 'Wina', 'winnica-lumen' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>"><?php esc_html_e( 'Kontakt', 'winnica-lumen' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#galeria"><?php esc_html_e( 'Galeria', 'winnica-lumen' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#faq">FAQ</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#kontakt"><?php esc_html_e( 'Kontakt', 'winnica-lumen' ); ?></a></li>
 				</ul>
 				<?php
 			}
@@ -55,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</nav>
 
 		<div class="header-actions">
-			<a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>" class="btn btn-primary btn-sm">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>#kontakt" class="btn btn-primary btn-sm">
 				<?php esc_html_e( 'Umów degustację', 'winnica-lumen' ); ?>
 			</a>
 			<button class="nav-toggle" type="button" aria-label="<?php esc_attr_e( 'Otwórz menu', 'winnica-lumen' ); ?>" aria-expanded="false">

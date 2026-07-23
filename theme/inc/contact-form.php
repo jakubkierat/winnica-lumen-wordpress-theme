@@ -1,6 +1,6 @@
 <?php
 /**
- * Obsługa formularza kontaktowego strony "Kontakt" (page-kontakt.php).
+ * Obsługa formularza kontaktowego w sekcji #kontakt na stronie głównej (front-page.php).
  *
  * Bez zewnętrznych wtyczek (typu Contact Form 7) — czysty PHP + wp_mail(),
  * z walidacją po stronie serwera, nonce i prostym honeypotem anty-spamowym.

@@ -56,16 +56,6 @@ function winnica_lumen_scripts() {
 		WINNICA_LUMEN_VERSION,
 		true
 	);
-
-	if ( is_page_template( 'page-kontakt.php' ) ) {
-		wp_localize_script(
-			'winnica-lumen-main',
-			'winnicaLumenContact',
-			array(
-				'nonce' => wp_create_nonce( 'winnica_lumen_contact_form' ),
-			)
-		);
-	}
 }
 add_action( 'wp_enqueue_scripts', 'winnica_lumen_scripts' );
 
@@ -82,3 +72,6 @@ require get_template_directory() . '/inc/custom-post-types.php';
 
 // Obsługa formularza kontaktowego (walidacja po stronie PHP + wp_mail).
 require get_template_directory() . '/inc/contact-form.php';
+
+// Zdjęcia z Unsplash użyte jako przykładowa treść wizualna.
+require get_template_directory() . '/inc/photos.php';

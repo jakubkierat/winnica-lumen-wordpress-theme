@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $wino_types = get_the_terms( get_the_ID(), 'typ-wina' );
 $wino_type  = ( $wino_types && ! is_wp_error( $wino_types ) ) ? $wino_types[0]->name : __( 'Wino', 'winnica-lumen' );
+$wino_slug  = ( $wino_types && ! is_wp_error( $wino_types ) ) ? $wino_types[0]->slug : 'czerwone';
 $rocznik    = get_post_meta( get_the_ID(), '_wino_rocznik', true );
 $region     = get_post_meta( get_the_ID(), '_wino_region', true );
 ?>
@@ -19,10 +20,12 @@ $region     = get_post_meta( get_the_ID(), '_wino_region', true );
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'medium' ); ?>
 		<?php else : ?>
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M9 2h6l-1 8.5a4 4 0 0 1-4 3.5 4 4 0 0 1-4-3.5L9 2Z" />
-				<path stroke-linecap="round" stroke-linejoin="round" d="M12 14v8M8 22h8" />
-			</svg>
+			<?php $bottle_key = winnica_lumen_bottle_photo_key( $wino_slug ); ?>
+			<img
+				src="<?php echo esc_url( winnica_lumen_photo_url( $bottle_key, 600 ) ); ?>"
+				alt="<?php echo esc_attr( winnica_lumen_photo_alt( $bottle_key ) ); ?>"
+				loading="lazy"
+			/>
 		<?php endif; ?>
 	</a>
 

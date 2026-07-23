@@ -11,11 +11,12 @@ dot. wdrożenia (SSH) i CDN/DNS (Cloudflare).
 
 ## Szybki podgląd bez instalacji WordPressa
 
-Katalog [`preview/`](preview/) zawiera statyczny podgląd strony głównej
-i podstrony kontaktowej — ten sam HTML/CSS/JS co w motywie, tylko bez
-zależności od bazy danych i silnika WordPressa. Wystarczy otworzyć
-`preview/index.html` w przeglądarce (albo wystawić katalog przez dowolny
-serwer statyczny / GitHub Pages).
+Katalog [`preview/`](preview/) zawiera statyczny podgląd całej strony
+(jedna strona, ze wszystkimi sekcjami łącznie z formularzem kontaktowym)
+— ten sam HTML/CSS/JS co w motywie, tylko bez zależności od bazy danych
+i silnika WordPressa. Wystarczy otworzyć `preview/index.html` w
+przeglądarce (albo wystawić katalog przez dowolny serwer statyczny /
+GitHub Pages).
 
 ## Struktura repozytorium
 
@@ -25,14 +26,16 @@ winnica-lumen-wordpress-theme/
 │   ├── style.css             ← nagłówek motywu (wymagany przez WP)
 │   ├── functions.php         ← konfiguracja motywu, enqueue CSS/JS, menu
 │   ├── header.php / footer.php
-│   ├── front-page.php        ← strona główna (Template Hierarchy)
-│   ├── page.php              ← domyślny szablon podstrony
-│   ├── page-kontakt.php      ← podstrona "Kontakt" z formularzem PHP
+│   ├── front-page.php        ← strona główna: hero, oferta, o nas, proces,
+│   │                            galeria, opinie, FAQ i formularz kontaktowy
+│   │                            (#kontakt) — wszystko na jednej stronie
+│   ├── page.php              ← domyślny szablon zwykłej podstrony
 │   ├── archive-wino.php      ← katalog win (archiwum CPT)
 │   ├── single-wino.php       ← widok pojedynczego wina
 │   ├── inc/
 │   │   ├── custom-post-types.php ← CPT "Wino" + taksonomia "Typ wina" + metabox
-│   │   └── contact-form.php      ← walidacja + wysyłka formularza (wp_mail)
+│   │   ├── contact-form.php      ← walidacja + wysyłka formularza (wp_mail)
+│   │   └── photos.php            ← mapowanie zdjęć z Unsplash użytych w motywie
 │   ├── template-parts/
 │   │   └── content-wino.php  ← karta wina używana w pętlach
 │   └── assets/
@@ -46,21 +49,28 @@ winnica-lumen-wordpress-theme/
 
 ## Funkcje motywu
 
+- **Jednostronicowy układ** — Oferta, O nas, Jak to działa, Galeria, Opinie,
+  FAQ i formularz kontaktowy żyją na jednej stronie głównej (`#kontakt`
+  zamiast osobnej podstrony), z płynnym przewijaniem między sekcjami.
 - **Custom Post Type „Wino”** z własną taksonomią „Typ wina” (czerwone,
   białe, różowe, musujące) i metaboxem w panelu admina (rocznik, region,
   zawartość alkoholu, cena) — zapisywanym z pełną walidacją i nonce.
 - **Formularz kontaktowy bez wtyczek** (`inc/contact-form.php`) — sanityzacja
   danych, nonce, honeypot antyspamowy, wysyłka przez `wp_mail()`, komunikaty
   błędów/sukcesu i „sticky” wypełnione pola po nieudanej walidacji.
+- **Zdjęcia z Unsplash** (`inc/photos.php`) zamiast pustych placeholderów —
+  darmowa licencja Unsplash License, autorzy wymienieni w kodzie z uprzejmości.
 - **Zgodność z Template Hierarchy WordPressa**: `front-page.php`, `page.php`,
-  `page-{slug}.php`, `archive-{post_type}.php`, `single-{post_type}.php`,
-  `404.php`, `index.php` jako fallback.
+  `archive-{post_type}.php`, `single-{post_type}.php`, `404.php`, `index.php`
+  jako fallback.
 - **Czysty JS (bez frameworków)**: menu mobilne, nagłówek reagujący na
-  scroll, animacje pojawiania się sekcji przez `IntersectionObserver`,
-  walidacja formularza jako *progressive enhancement* (formularz działa też
-  bez JS — walidacja i tak odbywa się w PHP po stronie serwera).
-- **CSS3** oparty o custom properties, CSS Grid/Flexbox, responsywność,
-  `prefers-reduced-motion` dla dostępności.
+  scroll, paralaksa zdjęcia w hero, animowane liczniki w statystykach,
+  animacje pojawiania się sekcji przez `IntersectionObserver`, akordeon FAQ
+  na czystym `<details>`/`<summary>` (CSS-only), walidacja formularza jako
+  *progressive enhancement* (formularz działa też bez JS — walidacja i tak
+  odbywa się w PHP po stronie serwera). Wszystkie animacje respektują
+  `prefers-reduced-motion`.
+- **CSS3** oparty o custom properties, CSS Grid/Flexbox, responsywność.
 - Kod zgodny z konwencjami WordPress Coding Standards (escaping: `esc_html`,
   `esc_attr`, `esc_url`; internacjonalizacja przez `__()` / `esc_html_e()`).
 
@@ -71,12 +81,11 @@ winnica-lumen-wordpress-theme/
    na serwerze).
 2. W panelu **Wygląd → Motywy** aktywuj „Winnica Lumen”.
 3. W **Ustawienia → Czytanie** ustaw stronę główną jako statyczną (motyw
-   używa `front-page.php`).
-4. Utwórz podstronę „Kontakt” i w edytorze, w polu **Szablon strony**,
-   wybierz „Kontakt” (`page-kontakt.php`).
-5. Dodaj kilka wpisów typu **Wina** (z panelu bocznego), przypisz **Typ
+   używa `front-page.php`) — formularz kontaktowy i wszystkie pozostałe
+   sekcje są już częścią tej strony, nie trzeba tworzyć osobnej podstrony.
+4. Dodaj kilka wpisów typu **Wina** (z panelu bocznego), przypisz **Typ
    wina** i uzupełnij metabox „Szczegóły wina”.
-6. W **Wygląd → Menu** przypisz menu do lokalizacji „Menu główne” / „Menu w
+5. W **Wygląd → Menu** przypisz menu do lokalizacji „Menu główne” / „Menu w
    stopce” (motyw ma sensowny fallback, jeśli menu nie jest ustawione).
 
 ## Mapowanie na wymagania technologiczne
@@ -111,6 +120,13 @@ Dla domeny spiętej z Cloudflare warto:
   serwerem,
 - po każdym wdrożeniu czyścić cache CDN (patrz komentarz w
   `deploy.example.sh`).
+
+## Zdjęcia
+
+Zdjęcia pochodzą z [Unsplash](https://unsplash.com) i są używane na
+[Unsplash License](https://unsplash.com/license) — darmowej w użyciu
+komercyjnym i niekomercyjnym, bez wymogu podawania autora. Pełna lista
+z linkami i podpisami autorów: [`theme/inc/photos.php`](theme/inc/photos.php).
 
 ## Licencja
 
